@@ -7,11 +7,3 @@ console.log(a - b);
 console.log(a * b);
 console.log(a / b);
 console.log(a % b);
-
-//exercicio 02
-if (a > b){
-    console.log(a);
-}
-else{
-    console.log(b);
-}
