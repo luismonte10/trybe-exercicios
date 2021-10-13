@@ -1,2 +1,2 @@
 # trybe-exercicios
-Exercícios feito durante o curso de Software Developer da Trybe.
+Exercícios feitos durante o curso de Web Developer da Trybe.
