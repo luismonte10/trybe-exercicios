@@ -1,4 +1,3 @@
-//exercicio 01
 const a = 2;
 const b = 4;
 
