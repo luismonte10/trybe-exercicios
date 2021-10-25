@@ -151,13 +151,13 @@ minhaDiv.addEventListener('click', taskSelected);
 let cont = 0;
 
 function taskSelected(event){
-  cont++;
-  if(cont % 2 !== 0){
-  event.target.classList.add('selected');
-  }
-  else if(cont % 2 === 0){
+  if(event.target.classList.contains('selected')) {
     event.target.classList.remove('selected');
   }
+  else{
+    event.target.classList.add('selected');
+  }
+  
 }
 
 //exercicio 10
