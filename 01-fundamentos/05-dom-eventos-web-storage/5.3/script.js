@@ -111,7 +111,7 @@ const day = document.querySelectorAll('.day');
 
 for(let i = 0; i < day.length; i += 1){
   day[i].addEventListener('mouseover', zoomIn);
-//  day[i].addEventListener('click', );
+  day[i].addEventListener('click', dayColor);
   day[i].addEventListener('mouseout', zoomOut);
 }
 
@@ -157,5 +157,17 @@ function taskSelected(event){
   }
   else if(cont % 2 === 0){
     event.target.classList.remove('selected');
+  }
+}
+
+//exercicio 10
+function dayColor(event){
+  let colorSelected = document.querySelector('.selected').style.backgroundColor;
+  if(event.target.style.color === colorSelected){
+    event.target.style.color = 'rgb(119,119,119)';
+  }
+  else{
+    event.target.style.color = colorSelected;
+    console.log(contColor);
   }
 }
