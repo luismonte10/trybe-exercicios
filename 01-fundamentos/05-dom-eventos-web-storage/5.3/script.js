@@ -40,6 +40,8 @@ function diasDoMes(){
 diasDoMes();
 
 //exercicio 02
+createButtonHoliday('Feriados');
+
 function createButtonHoliday(param){
   let btn = document.createElement('button');
   btn.id = 'btn-holiday';
@@ -47,8 +49,6 @@ function createButtonHoliday(param){
   let divBtn = document.querySelector('.buttons-container');
   divBtn.appendChild(btn);
 }
-
-createButtonHoliday('Feriados');
 
 //exercicio 03
 let buttonHoliday = document.getElementById('btn-holiday');
@@ -75,4 +75,13 @@ function mudarCorFeriados(){
   console.log(cont)
 }
 
+//exercicio 04
+createButtonFriday('Sexta-Feira');
 
+function createButtonFriday(param){
+  let btn = document.createElement('button');
+  btn.id = 'btn-friday';
+  btn.innerText = param;
+  let divBtn = document.querySelector('.buttons-container');
+  divBtn.appendChild(btn);
+}
