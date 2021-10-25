@@ -133,3 +133,14 @@ function createTask(event){
 }
 
 createTask('Projeto');
+
+//exercicio 08
+function divCor(cor){
+  let divCor = document.createElement('div');
+  divCor.className = 'task';
+  divCor.style.backgroundColor = cor;
+  let myDiv = document.querySelector('.my-tasks');
+  myDiv.appendChild(divCor);
+}
+
+divCor('green');
