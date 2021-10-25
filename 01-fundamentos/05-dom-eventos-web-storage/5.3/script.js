@@ -53,26 +53,26 @@ function createButtonHoliday(param){
 //exercicio 03
 let buttonHoliday = document.getElementById('btn-holiday');
 
-buttonHoliday.addEventListener('click', mudarCorFeriados);
+buttonHoliday.addEventListener('click', changeColorHoliday);
 
-let cont = 0;
+let contHoliday = 0;
 
-function mudarCorFeriados(){
-  cont++;
-  if(cont % 2 !== 0){
+function changeColorHoliday(){
+  contHoliday += 1;
+  if(contHoliday % 2 !== 0){
     let tamanhoHoliday = document.querySelectorAll('.holiday');
     for(let i = 0; i < tamanhoHoliday.length; i += 1){
     tamanhoHoliday[i].style.backgroundColor = 'green'
     }
   }  
-  else if(cont % 2 === 0){
+  else if(contHoliday % 2 === 0){
     let tamanhoHoliday = document.querySelectorAll('.holiday');
     for(let i = 0; i < tamanhoHoliday.length; i += 1){
     tamanhoHoliday[i].style.backgroundColor = 'rgb(238,238,238)'
     }
-    
+
   }
-  console.log(cont)
+
 }
 
 //exercicio 04
@@ -84,4 +84,24 @@ function createButtonFriday(param){
   btn.innerText = param;
   let divBtn = document.querySelector('.buttons-container');
   divBtn.appendChild(btn);
+}
+
+//exercicio 05
+let buttonFriday = document.getElementById('btn-friday');
+
+buttonFriday.addEventListener('click', changeTextFriday);
+
+let contFriday = 0;
+
+function changeTextFriday(){
+  contFriday += 1;
+  if(contFriday % 2 !== 0){
+    let tamanhoFriday = document.querySelectorAll('.friday');
+    for(let i = 0; i < tamanhoFriday.length; i += 1){
+      tamanhoFriday[i].innerText = 'Sextou o/';
+    }
+  }
+  else if(contFriday % 2 === 0){
+    window.location.reload();
+  }
 }
