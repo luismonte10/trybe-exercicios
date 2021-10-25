@@ -124,4 +124,12 @@ function zoomOut(param){
   param.target.style.fontSize = '20px'
 }
 
+//exercicio 07
+function createTask(event){
+  let span = document.createElement('span');
+  span.innerText = event;
+  let myDiv = document.querySelector('.my-tasks');
+  myDiv.appendChild(span);
+}
 
+createTask('Projeto');
