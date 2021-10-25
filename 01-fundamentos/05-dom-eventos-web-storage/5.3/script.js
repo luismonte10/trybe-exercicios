@@ -144,3 +144,18 @@ function divCor(cor){
 }
 
 divCor('green');
+
+//exercicio 09
+let minhaDiv = document.querySelector('.task');
+minhaDiv.addEventListener('click', taskSelected);
+let cont = 0;
+
+function taskSelected(event){
+  cont++;
+  if(cont % 2 !== 0){
+  event.target.classList.add('selected');
+  }
+  else if(cont % 2 === 0){
+    event.target.classList.remove('selected');
+  }
+}
