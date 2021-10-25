@@ -40,7 +40,7 @@ function diasDoMes(){
 diasDoMes();
 
 //exercicio 02
-function buttonHoliday(param){
+function createButtonHoliday(param){
   let btn = document.createElement('button');
   btn.id = 'btn-holiday';
   btn.innerText = param;
@@ -48,5 +48,31 @@ function buttonHoliday(param){
   divBtn.appendChild(btn);
 }
 
-buttonHoliday('Feriados');
+createButtonHoliday('Feriados');
+
+//exercicio 03
+let buttonHoliday = document.getElementById('btn-holiday');
+
+buttonHoliday.addEventListener('click', mudarCorFeriados);
+
+let cont = 0;
+
+function mudarCorFeriados(){
+  cont++;
+  if(cont % 2 !== 0){
+    let tamanhoHoliday = document.querySelectorAll('.holiday');
+    for(let i = 0; i < tamanhoHoliday.length; i += 1){
+    tamanhoHoliday[i].style.backgroundColor = 'green'
+    }
+  }  
+  else if(cont % 2 === 0){
+    let tamanhoHoliday = document.querySelectorAll('.holiday');
+    for(let i = 0; i < tamanhoHoliday.length; i += 1){
+    tamanhoHoliday[i].style.backgroundColor = 'rgb(238,238,238)'
+    }
+    
+  }
+  console.log(cont)
+}
+
 
