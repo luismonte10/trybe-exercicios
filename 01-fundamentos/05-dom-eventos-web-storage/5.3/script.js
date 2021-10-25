@@ -16,6 +16,7 @@ createDaysOfTheWeek();
 // Escreva seu código abaixo.
 const dezDaysList = [29, 30, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31];
 
+//exercicio 01
 function diasDoMes(){
   for(let i = 0; i < dezDaysList.length; i += 1) {
     let diaMes = document.createElement('li');
@@ -38,3 +39,69 @@ function diasDoMes(){
 
 diasDoMes();
 
+//exercicio 02
+createButtonHoliday('Feriados');
+
+function createButtonHoliday(param){
+  let btn = document.createElement('button');
+  btn.id = 'btn-holiday';
+  btn.innerText = param;
+  let divBtn = document.querySelector('.buttons-container');
+  divBtn.appendChild(btn);
+}
+
+//exercicio 03
+let buttonHoliday = document.getElementById('btn-holiday');
+
+buttonHoliday.addEventListener('click', changeColorHoliday);
+
+let contHoliday = 0;
+
+function changeColorHoliday(){
+  contHoliday += 1;
+  if(contHoliday % 2 !== 0){
+    let tamanhoHoliday = document.querySelectorAll('.holiday');
+    for(let i = 0; i < tamanhoHoliday.length; i += 1){
+    tamanhoHoliday[i].style.backgroundColor = 'green'
+    }
+  }  
+  else if(contHoliday % 2 === 0){
+    let tamanhoHoliday = document.querySelectorAll('.holiday');
+    for(let i = 0; i < tamanhoHoliday.length; i += 1){
+    tamanhoHoliday[i].style.backgroundColor = 'rgb(238,238,238)'
+    }
+
+  }
+
+}
+
+//exercicio 04
+createButtonFriday('Sexta-Feira');
+
+function createButtonFriday(param){
+  let btn = document.createElement('button');
+  btn.id = 'btn-friday';
+  btn.innerText = param;
+  let divBtn = document.querySelector('.buttons-container');
+  divBtn.appendChild(btn);
+}
+
+//exercicio 05
+let buttonFriday = document.getElementById('btn-friday');
+
+buttonFriday.addEventListener('click', changeTextFriday);
+
+let contFriday = 0;
+
+function changeTextFriday(){
+  contFriday += 1;
+  if(contFriday % 2 !== 0){
+    let tamanhoFriday = document.querySelectorAll('.friday');
+    for(let i = 0; i < tamanhoFriday.length; i += 1){
+      tamanhoFriday[i].innerText = 'Sextou o/';
+    }
+  }
+  else if(contFriday % 2 === 0){
+    window.location.reload();
+  }
+}
