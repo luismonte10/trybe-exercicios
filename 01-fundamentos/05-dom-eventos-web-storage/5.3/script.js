@@ -40,8 +40,6 @@ function diasDoMes(){
 diasDoMes();
 
 //exercicio 02
-createButtonHoliday('Feriados');
-
 function createButtonHoliday(param){
   let btn = document.createElement('button');
   btn.id = 'btn-holiday';
@@ -49,6 +47,8 @@ function createButtonHoliday(param){
   let divBtn = document.querySelector('.buttons-container');
   divBtn.appendChild(btn);
 }
+
+createButtonHoliday('Feriados');
 
 //exercicio 03
 let buttonHoliday = document.getElementById('btn-holiday');
@@ -76,8 +76,6 @@ function changeColorHoliday(){
 }
 
 //exercicio 04
-createButtonFriday('Sexta-Feira');
-
 function createButtonFriday(param){
   let btn = document.createElement('button');
   btn.id = 'btn-friday';
@@ -85,6 +83,8 @@ function createButtonFriday(param){
   let divBtn = document.querySelector('.buttons-container');
   divBtn.appendChild(btn);
 }
+
+createButtonFriday('Sexta-Feira');
 
 //exercicio 05
 let buttonFriday = document.getElementById('btn-friday');
@@ -105,3 +105,23 @@ function changeTextFriday(){
     window.location.reload();
   }
 }
+
+//exercicio 06
+const day = document.querySelectorAll('.day');
+
+for(let i = 0; i < day.length; i += 1){
+  day[i].addEventListener('mouseover', zoomIn);
+//  day[i].addEventListener('click', );
+  day[i].addEventListener('mouseout', zoomOut);
+}
+
+function zoomIn(param){
+  param.target.style.fontSize = '35px'
+  console.log(param.target);
+}
+
+function zoomOut(param){
+  param.target.style.fontSize = '20px'
+}
+
+
