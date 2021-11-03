@@ -6,3 +6,10 @@ for (let i = 0; i < estados.length; i += 1) {
   listaEstados.appendChild(criaEstados);
   criaEstados.innerText = estados[i];
 }
+
+function teste(event) {
+  event.preventDefault();
+}
+
+const bttSubimit = document.getElementById('bttSubmit');
+bttSubimit.addEventListener('click', teste);
