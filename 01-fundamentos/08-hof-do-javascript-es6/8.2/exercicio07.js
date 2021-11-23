@@ -35,7 +35,7 @@ const books = [
     genre: 'Ficção Científica',
     author: {
       name: 'Frank Herbert',
-      birthYear: 1921,
+      birthYear: 1920,
     },
     releaseYear: 1965,
   },
@@ -66,7 +66,10 @@ const expectedResult = false;
 
 function authorUnique(books) {
   // escreva seu código aqui
-  return books.some((book) => book.author.birthYear === book.author.birthYear);
+  return books.every((book) => {
+    const test = books.some((teste) => teste.author.birthYear === book.author.birthYear && teste.author.name !== book.author.name);
+    return !test;
+  });
 }
 
 console.log(authorUnique(books));
