@@ -35,7 +35,7 @@ const books = [
     genre: 'Ficção Científica',
     author: {
       name: 'Frank Herbert',
-      birthYear: 1920,
+      birthYear: 1921,
     },
     releaseYear: 1965,
   },
@@ -64,9 +64,9 @@ const books = [
 // Adicione o código do exercício aqui:
 const expectedResult = false;
 
-function everyoneWasBornOnSecXX(books) {
+function authorUnique(books) {
   // escreva seu código aqui
-  return books.every((book) => book.author.birthYear > 1900 && book.author.birthYear <= 2000)
+  return books.some((book) => book.author.birthYear === book.author.birthYear);
 }
 
-console.log(everyoneWasBornOnSecXX(books));
+console.log(authorUnique(books));
